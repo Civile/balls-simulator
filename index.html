@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Civile - 2d force simulator</title>
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="Vec2.js"></script>
+    <script type="text/javascript" src="test.js"></script>
+   
+   
+		<meta name="description" content="Civile, personal portfolio | 2d force simulator">
+        <meta name="keywords" content="Sebastiano, Edoardo, Casella, sviluppatore, web, fotografia, developer, physix, javascript, html5, canvas">
+        <meta name="author" content="Sebastiano Edoardo Casella">
+        <meta charset="UTF-8">
+
+        <meta property="og:url" content="http://www.edoardocasella.it/blog/gsources/simulator" />
+        <meta property="og:site_name" content="Civile, personal portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Civile, personal portfolio - 2d force simulator" />
+        <meta property="og:image" content="http://www.edoardocasella.it/src/blog/images/blog_1/b1.jpg" />
+        <meta property="og:description" content="Civile personal portfolio | 2d force simulator" />
+        <meta property="fb:app_id" content="7363627862327638" />
+   
+   
+    <style>
+        body {
+            background:white;
+            overflow:hidden;
+        }
+        #window {
+            border:1px solid white;
+            width:900px;
+            height:520px;
+            margin:auto;
+            background:white;
+        }
+        #test {
+            border:1px solid white;
+            background:white;
+            margin-bottom:-5px;
+            background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 5%, rgba(0,0,0,0) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(5%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+        }
+        #setup {
+            height:50px;
+            border:0px solid #DDD;
+            width:900px;
+            margin:auto;
+        }
+            #setup .ballsCounter {
+                float:right;
+                font-size:12px;
+            }
+        #setupTable {
+            border:0px solid #ddd;
+            width:100%;
+            text-align:center;
+            font-size:12px;
+        }
+            #setupTable td {
+                border:0px solid #FFF;
+                font-size: 15px;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="window">
+	<div style="float:left; font-size:12px;"><a href="http://www.edoardocasella.it" target="_blank" style="color:#293134">Civile</a> - basic force simulator</div>
+	<div style="text-align:right; text-align: right; font-size: 17px; font-weight: bold; color: red;">CLICK TO ADD A BALL</div>
+        <canvas id="test"></canvas>
+        <div id="setup">
+		
+            <table id="setupTable">
+                <tr><td>Follow mouse</td><td>Apply gravity</td><td>Apply friction</td><td>Apply wind</td><td>Show water</td><td>Spawn attractor</td></tr>
+                <tr><td><input type="checkbox" id="followMouse" /></td>
+                    <td><input type="checkbox" id="applyGravity" checked/></td>
+                    <td><input type="checkbox" id="applyFriction"/></td>
+                    <td><input type="checkbox" id="applyWind"/>Use arrow keys to set x-y</td>
+                    <td><input type="checkbox" id="showWater"/></td>
+                    <td><input type="checkbox" id="spawnAttractor"/></td>
+                </tr>
+            </table>
+            <div class="ballsCounter"></div>
+			
+        </div>
+    </div>
+</body>
+
+</html>
