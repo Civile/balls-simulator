@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+
+    <title>Vec2</title>
+
+    <script type="text/javascript" src="jquery-1.7.2.js"></script>
+
+    <script type="text/javascript" src="Vec2.js"></script>
+
+    <script type="text/javascript" src="test.js"></script>
+
+   
+
+    <style>
+
+        body {
+
+            background:black;
+
+        }
+
+        #window {
+
+            border:1px solid yellow;
+
+            width:900px;
+
+            height:500px;
+
+            margin:auto;
+
+            padding:10px;
+
+        }
+
+        #test {
+
+            border:1px solid white;
+
+            background:white;
+
+            margin-bottom:-5px;
+
+            background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 5%, rgba(0,0,0,0) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(5%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0)));
+background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 100%);
+background: -o-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 100%);
+background: -ms-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 100%);
+background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 5%,rgba(0,0,0,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+
+        }
+
+        #setup {
+
+            height:90px;
+
+            border:1px solid #DDD;
+
+            width:900px;
+
+            background:#fff;
+
+        }
+
+            #setup .ballsCounter {
+
+                float:right;
+
+                font-size:12px;
+
+            }
+
+        #setupTable {
+
+            border:2px solid #ddd;
+
+            width:100%;
+
+            text-align:center;
+
+            font-size:12px;
+
+        }
+
+            #setupTable td {
+
+                border:1px solid #FFF;
+
+            }
+
+    </style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+    <div id="window">
+
+        <canvas id="test"></canvas>
+
+        <div id="setup">
+
+            <table id="setupTable">
+
+                <tr><td>Follow mouse</td><td>Apply gravity</td><td>Apply friction</td><td>Apply wind</td><td>Show water</td></tr>
+
+                <tr><td><input type="checkbox" id="followMouse" /></td>
+
+                    <td><input type="checkbox" id="applyGravity" checked/></td>
+
+                    <td><input type="checkbox" id="applyFriction" checked/></td>
+
+                    <td><input type="checkbox" id="applyWind" checked/></td>
+
+                    <td><input type="checkbox" id="showWater"/></td></tr>
+
+            </table>
+
+            <div class="ballsCounter"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+</html>
