@@ -4,5 +4,4 @@ An old experiment...
 
 HTML5 canvas api
 
-# WHY I DID IT?
-Just to study something new
+Online :: http://projects.edoardocasella.it/simulator/
